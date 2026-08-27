@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6f1834" />
+  <meta name="description" content="A little Raksha Bandhan surprise made with love." />
+  <title>For My Dii ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="enhancements.css" />
+</head>
+<body>
+  <div class="grain"></div><div class="petals" aria-hidden="true"></div>
+  <button class="music-toggle" id="musicToggle" aria-label="Play background music" title="Music">♫</button>
+  <audio id="music" loop preload="none"><source src="music/rakhi-music.mp3" type="audio/mpeg" /></audio>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="rakhi-orbit" aria-hidden="true"><span></span><i></i><b></b></div>
+      <div class="hero-copy">
+        <p class="eyebrow">A tiny surprise, made with love</p>
+        <h1>Hey <span class="sister-name">Dii</span> <em>❤️</em></h1>
+        <p class="hero-lead">I made a little something for you…<br />Just because you’re special.</p>
+        <button class="button primary" id="openSurprise">Open Your Surprise <span>→</span></button>
+      </div>
+      <p class="scroll-note">scroll to unwrap <span>↓</span></p>
+    </section>
+
+    <section class="memories section" id="memories">
+      <div class="section-intro reveal">
+        <p class="eyebrow">A small walk down memory lane</p>
+        <h2>Some memories, some madness,<br />and a lot of love. <em>❤️</em></h2>
+      </div>
+      <div class="gallery">
+        <figure class="polaroid reveal"><img src="images/p1jpeg.jpeg" alt="A favourite memory" /><figcaption>The good times…</figcaption></figure>
+        <figure class="polaroid reveal"><img src="images/p2jpeg.jpeg" alt="A favourite memory" /><figcaption>The crazy times…</figcaption></figure>
+        <figure class="polaroid reveal"><img src="images/p3.jpeg" alt="A favourite memory" /><figcaption>The moments I’ll always remember.</figcaption></figure>
+        <figure class="polaroid reveal"><img src="images/p4.jpeg" alt="A favourite memory" /><figcaption>Just us. ❤️</figcaption></figure>
+      </div>
+      <p class="replace-note">Replace the photos in the <code>images</code> folder with your own favourites.</p>
+    </section>
+
+    <section class="wish section">
+      <div class="wish-card reveal">
+        <p class="eyebrow">For my favourite person</p>
+        <h2>Happy Raksha Bandhan,<br /><span class="sister-name">Dii</span> ❤️🎀</h2>
+        <p class="large">One of the most beautiful things that happened in my life was having you as my sister. ❤️</p>
+        <div class="letter">
+          <p>You have been a part of so many moments of my life — some beautiful, some crazy, and some that we’ll probably never talk about. 😄</p>
+          <p>I may not say it every day, but I truly feel lucky to have a sister like you.</p>
+          <p>I hope you always keep smiling, keep chasing your dreams, and get everything you wish for.</p>
+          <p>And whenever life gets a little difficult, just remember —</p>
+          <p><strong>Your brother is always just one call away. ❤️</strong></p>
+          <p>No matter how much we grow up, you’ll always be my Dii, and I’ll always be your little brother. 🫶</p>
+        </div>
+        <p class="signoff">Happy Raksha Bandhan, Dii! 🎀❤️<br /><small>Love you always.</small></p>
+      </div>
+    </section>
+
+    <section class="gift-start section" id="gift">
+      <div class="reveal">
+        <p class="eyebrow">There’s one more thing</p><h2>I got you something… 🎁</h2>
+        <p>But before I give it to you,<br />I need to ask you one very important question.</p>
+      </div>
+      <button class="gift-box" id="openGift" aria-label="Open the gift"><span class="gift-lid"></span><span class="gift-bow">♥</span><span class="gift-ribbon"></span><span class="gift-body"></span></button>
+      <button class="button primary" id="openGiftText">Open the Gift 🎁</button>
+    </section>
+
+    <section class="question section" id="question">
+      <p class="eyebrow">So…</p><h2>What do you want as your<br />Raksha Bandhan gift? 🎁</h2>
+      <div class="choice-area" id="choiceArea">
+        <button class="button primary yes" id="yesButton">❤️ YES, GIVE ME MY GIFT</button>
+        <button class="button outline" id="noButton">😌 NO, I’M GOOD</button>
+      </div>
+      <p class="tease" id="tease" aria-live="polite"></p>
+      <div class="no-message" id="noMessage" hidden>
+        <p class="eyebrow">I already knew your answer. 😌</p>
+        <h3>Because you already have the<br />BEST BROTHER IN THE WORLD. 😎❤️</h3>
+        <p>What more could you possibly ask for?</p>
+        <p class="soft">Okay okay… I’m kidding 😂<br />Your actual gift is waiting for you. 🎁</p>
+        <button class="button primary" id="showGift">Okay, Show Me My Gift ❤️</button>
+      </div>
+    </section>
+
+    <section class="final-gift section" id="finalGift" hidden>
+      <div class="final-box reveal">
+        <div class="mini-gift" aria-hidden="true">🎁</div><p class="eyebrow">Unwrapped, just for you</p>
+        <h2>This is your real gift. ❤️</h2>
+        <div class="final-message"><p>Not something expensive.</p><p>Not something wrapped in paper.</p><p>Just a little reminder that <strong>you’ll always be special to me.</strong></p><p>No matter how much we grow up, no matter how much we fight, you’ll always be my sister, and I’ll always be your brother. ❤️</p></div>
+        <p class="signoff">Happy Raksha Bandhan, <span class="sister-name">Dii</span>! 🎀<br /><small>Love,</small></p>
+        <button class="button primary" id="lastSurprise">One Last Surprise… ✨</button>
+      </div>
+    </section>
+
+    <section class="last-photo section" id="lastPhoto">
+      <div class="photo-reveal"><img src="images/ps.jpeg" alt="Brother and sister together" /><div class="heart one">♥</div><div class="heart two">♥</div></div>
+      <p>Happy Raksha Bandhan, <span class="sister-name">Dii</span>.<br />Always stay happy. ❤️</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

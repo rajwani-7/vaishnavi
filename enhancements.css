@@ -1,0 +1,56 @@
+/* Final polish: staggered letter reveal. */
+.letter-line { opacity: 0 !important; transform: translateY(13px); transition: opacity .7s ease, transform .7s ease; }
+.letter-line.visible { opacity: .92 !important; transform: none; }
+
+/* The real gift cannot be reached until she earns it. */
+#finalGift[hidden] { display: none !important; }
+
+/* NO response is part of the page, never a popup. */
+.no-message { max-width: 600px; margin: 20px auto 0; padding: 26px; background: #fff6f0; border: 1px solid #e8c9c4; box-shadow: 0 12px 30px #6b193318; }
+.no-message h3 { margin: 0 0 13px; font: 600 clamp(1.5rem, 3vw, 2.2rem)/1.2 'Playfair Display', serif; color: #6b1933; }
+.no-message .soft { color: #8b6570; font-size: .9rem; }
+.no-message.visible { animation: message-in .5s ease both; }
+@keyframes message-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* Never crop personal photos: preserve the full image inside each frame. */
+.polaroid img, .photo-reveal img { object-fit: contain; background: #fff4ed; }
+
+/* Keep the third memory card in its original full-frame style. */
+.polaroid:nth-child(3) img { object-fit: cover; }
+
+/* Mobile-first finishing pass. */
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .section { min-height: 100svh; padding: 64px 18px; }
+  .hero { min-height: 100svh; }
+  h1 { font-size: clamp(3rem, 15vw, 4.4rem); }
+  h2 { font-size: clamp(2rem, 10vw, 2.8rem); }
+  .hero-lead { font-size: 1.05rem; margin: 18px 0 28px; }
+  .eyebrow { font-size: .61rem; letter-spacing: .14em; }
+  .rakhi-orbit { width: 125vw; opacity: .7; }
+  .gallery { grid-template-columns: minmax(0, 285px); gap: 24px; }
+  .polaroid:nth-child(n) { margin: 0; transform: rotate(-2deg); }
+  .polaroid:nth-child(even) { transform: rotate(2deg); }
+  .polaroid img { min-height: 250px; }
+  .polaroid figcaption { font-size: 1.9rem; }
+  .replace-note { margin-top: 35px; }
+  .wish-card { width: 100%; padding: 34px 19px; }
+  .large { font-size: 1.1rem; }
+  .letter { font-size: .92rem; }
+  .letter p { margin: 16px 0; }
+  .gift-start { min-height: 100svh; }
+  .gift-box { transform: scale(.86); margin: 24px 0 8px; }
+  .gift-box:hover { transform: scale(.86) translateY(-5px); }
+  .button { min-height: 48px; padding: 13px 21px; font-size: .73rem; }
+  .choice-area { width: 100%; gap: 13px; }
+  .choice-area .button { width: 100%; max-width: 340px; }
+  .yes.moving { max-width: calc(100vw - 36px); white-space: nowrap; font-size: .67rem; }
+  .no-message { padding: 24px 16px; width: 100%; }
+  .no-message h3 { font-size: 1.65rem; }
+  .final-gift, .last-photo { min-height: 100svh; }
+  .final-message { font-size: 1.03rem; line-height: 1.7; }
+  .photo-reveal { width: 100%; padding: 7px; transform: none; }
+  .photo-reveal img { max-height: 68svh; }
+  .heart.one { left: -14px; }.heart.two { right: -14px; }
+  .music-toggle { width: 42px; height: 42px; right: 12px; bottom: 12px; }
+}

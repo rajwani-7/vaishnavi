@@ -12,8 +12,12 @@
 .no-message.visible { animation: message-in .5s ease both; }
 @keyframes message-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
-/* Never crop personal photos: preserve the full image inside each frame. */
+/* Preserve personal photos inside each frame by default. */
 .polaroid img, .photo-reveal img { object-fit: contain; background: #fff4ed; }
+
+/* Crop the second memory into a compact square polaroid. */
+.polaroid--wide { grid-column: auto; }
+.polaroid.polaroid--wide img { display: block; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center; background: none; }
 
 /* Keep the third memory card in its original full-frame style. */
 .polaroid:nth-child(3) img { object-fit: cover; }
@@ -29,6 +33,7 @@
   .eyebrow { font-size: .61rem; letter-spacing: .14em; }
   .rakhi-orbit { width: 125vw; opacity: .7; }
   .gallery { grid-template-columns: minmax(0, 285px); gap: 24px; }
+  .polaroid--wide { grid-column: auto; }
   .polaroid:nth-child(n) { margin: 0; transform: rotate(-2deg); }
   .polaroid:nth-child(even) { transform: rotate(2deg); }
   .polaroid img { min-height: 250px; }

@@ -1,6 +1,6 @@
 /* ===== Customize your surprise here ===== */
-const sisterName = 'Booboo';
-const photos = ['images/p1.jpeg','images/p2.jpeg','images/p3.jpeg','images/p4.jpeg','images/ps.jpeg'];
+const sisterName = 'Tai';
+const photos = ['images/p1.jpeg','images/p2.jpeg','images/p3.jpeg','images/ps.jpeg'];
 /* To add music: put an MP3 at music/rakhi-music.mp3 */
 
 document.querySelectorAll('.sister-name').forEach(el => el.textContent = sisterName);

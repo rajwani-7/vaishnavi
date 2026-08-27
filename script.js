@@ -1,5 +1,5 @@
 /* ===== Customize your surprise here ===== */
-const sisterName = 'Tai';
+const sisterName = 'Vaishnavi';
 const photos = ['images/p1.jpeg','images/p2.jpeg','images/p3.jpeg','images/ps.jpeg'];
 /* To add music: put an MP3 at music/rakhi-music.mp3 */
 
